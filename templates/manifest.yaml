@@ -1,0 +1,34 @@
+# EvoScripts Template Manifest
+# 此文件定义模版文件夹的元数据和用途说明
+
+version: "1.0"
+
+# 模版分类说明
+categories:
+  code:
+    description: "Python 代码模版 - API调用、数据处理、验证逻辑等参考代码"
+    file_types: [".py"]
+    usage: "Code Agent 会参考这些代码的风格和模式来生成清洗脚本"
+
+  examples:
+    target:
+      description: "目标数据示例 - 符合筛选条件的数据样本"
+      file_types: [".json", ".jsonl"]
+      usage: "帮助 Judge 和 Code Agent 理解什么是'好'数据"
+
+    non_target:
+      description: "非目标数据示例 - 应被过滤掉的数据样本"
+      file_types: [".json", ".jsonl"]
+      usage: "帮助理解什么数据应该被排除"
+
+  output:
+    description: "输出格式示例 - 期望的清洗后数据格式"
+    file_types: [".json", ".jsonl", ".schema.json"]
+    usage: "定义清洗后数据的结构和字段"
+
+# 可选：为特定文件添加说明
+files:
+  # 示例:
+  # code/api_client.py:
+  #   description: "调用外部 API 的标准模式"
+  #   priority: high
